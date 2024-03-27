@@ -16,13 +16,13 @@ theme:
     - scheme: default
       toggle:
         icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
+        name: Passer en mode sombre
       primary: teal
       accent: purple 
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
+        name: Passer en mode clair    
       primary: teal
       accent: lime
 
@@ -40,6 +40,8 @@ markdown_extensions:
   - footnotes
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.mark
   - attr_list
 
