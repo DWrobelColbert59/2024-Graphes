@@ -57,7 +57,8 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
 
 !!! info "Chaîne"
 
-    Dans un graphe $G = (V, E)$, une chaîne reliant $u \in V$ à $v \in V$ est définie par une suite finie d'arêtes consécutives reliant $u$ à $v$.
+    Dans un graphe $G = (V, E)$, une **chaîne** reliant $u \in V$ à $v \in V$ est définie par une suite finie d'arêtes consécutives reliant $u$ à $v$.  
+    S'il existe un chemin allant de $u \in V$ à $u \in V$ on dit que c'est un **cycle**.
 
 !!! info "Degré d'un sommet"
 
@@ -82,9 +83,10 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
 
         ??? warning "Attention !"
 
-            Attention au changement de notation et de nom !  
+            Attention au changement de notation et de noms ! 
+
             L'arête $\lbrace u, v\rbrace$ laisse place à l'arc $(u, v)$.  
-            De la même façon, on ne parle plus de chaîne mais de chemin.
+            De la même façon, on ne parle plus de **chaînes** mais de **chemins**.
 
 !!! example "Exemple de graphe orienté"
 
@@ -109,8 +111,6 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
     Dans le graphe précédent, on a $\delta^-(D) = 1$ et $\delta^+(D) = 3$.
 
 ## Implantation
-
-Bla bla
 
 ### Avec des dictionnaires
 
