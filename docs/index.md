@@ -110,6 +110,8 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
 
 ## Implantation
 
+Bla bla
+
 ### Avec des dictionnaires
 
 ### Avec une matrice
@@ -118,4 +120,4 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
 
 ### Parcours en profondeur
 
-### Parcours en largeur d'abordkd
+### Parcours en largeur d'abord
