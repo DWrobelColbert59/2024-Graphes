@@ -55,6 +55,10 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
         V = \lbrace A, B, C, D, E, F, G\rbrace \quad \textrm{et} \quad E = \left\lbrace \rule[0.5cm]{0cm}{0pt} \lbrace A, B \rbrace, \lbrace A, C\rbrace, \lbrace A, D\rbrace, \lbrace B, D \rbrace, \lbrace B, E\rbrace, \lbrace B, G\rbrace, \lbrace C, E\rbrace, \lbrace C,F \rbrace \right\rbrace
     \]
 
+!!! info "Chaîne"
+
+    Dans un graphe $G = (V, E)$, une chaîne reliant $u \in V$ à $v \in V$ est définie par une suite finie d'arêtes consécutives reliant $u$ à $v$.
+
 !!! info "Degré d'un sommet"
 
     Soit $G = (V, E)$ un graphe et $v \in V$ un sommet.  
@@ -63,7 +67,6 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
 !!! example "Exemple"
 
     Dans le graphe précédent, on a $\delta(B) = 4$.
-
 
 ### Vocabulaire
 
@@ -80,14 +83,15 @@ informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour
         ??? warning "Attention !"
 
             Attention au changement de notation et de nom !  
-            L'arête $\lbrace u, v\rbrace$ laisse place à l'arc $(u, v)$.
+            L'arête $\lbrace u, v\rbrace$ laisse place à l'arc $(u, v)$.  
+            De la même façon, on ne parle plus de chaîne mais de chemin.
 
 !!! example "Exemple de graphe orienté"
 
     Mathématiquement, le graphe orienté suivant :
 
     <center>
-        <img src="./images/ex2.png" alt="image" width="250" height="auto">
+        <img src="./images/ex2.png" alt="image" width="175" height="auto">
     </center>
 
     s'écrit $G = (V, E)$ avec :
