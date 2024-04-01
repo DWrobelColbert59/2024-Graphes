@@ -67,4 +67,95 @@
             <img src="../images/exo2.png" alt="image" width="450" height="auto">
         </center>
 
-## En implantant avec un dictionnaire
+## Avec une liste d'adjacence
+
+!!! question "Exercice 3"
+
+    On considère le graphe dont la liste d'adjacence est donnée par :
+
+    \[
+        \begin{array}{ccl}
+            \begin{array}{|c|}\hline A\\\hline\end{array} & \longrightarrow & \begin{array}{|c|}\hline B \\\hline\end{array}\\
+            \begin{array}{|c|}\hline B\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|c|}\hline A & D & G \\\hline\end{array}\\
+            \begin{array}{|c|}\hline C\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|}\hline D & E \\\hline\end{array}\\
+            \begin{array}{|c|}\hline D\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|c|c|}\hline B & C & E & G\\\hline\end{array}\\
+            \begin{array}{|c|}\hline E\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|}\hline C & D \\\hline\end{array}\\
+            \begin{array}{|c|}\hline F\\\hline\end{array} & \longrightarrow & \begin{array}{|c|}\hline G\\\hline\end{array}\\
+            \begin{array}{|c|}\hline G\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|c|}\hline B & D & F\\\hline\end{array}\\
+        \end{array}
+    \]
+
+    1. Ce graphe est-il orienté ou simple ?
+    2. Donner le degré du sommet $D$.
+    3. Proposer un dictionnaire écrit en python implantant ce graphe.
+
+??? tip "Indications"
+
+    1. Il suffit de vérifier si chaque arête $(u, v)$ possède son symétrique $(v, u)$ dans la liste d'adjacence.
+
+??? bug "Correction"
+
+    1. Toutes les arêtes possèdent un symétrique dans la liste donc le graphe est simple.
+    2. Le sommet de $D$ est $\delta(D) = 4$.
+    3. On propose le dictionnaire :
+
+        ``` python title="Proposition de correction" linenums="1"
+        G = {   'A' : ['B'],
+                'B' : ['A', 'D', 'G'],
+                'C' : ['D', 'E'],
+                'D' : ['B', 'C', 'E', 'G'],
+                'E' : ['C', 'D'],
+                'F' : ['G'],
+                'G' : ['B', 'D', 'F']}
+        ```
+
+!!! question "Exercice 4"
+
+    1. Écrire une fonction `degre(G : dict, s : str) -> int` qui renvoie le degré d'un sommet $s$.
+    2. Compléter la fonction `degre_max(G : dict) -> str` qui renvoie le sommet de plus grand degré dans un graphe $G$ :
+
+        ``` python title="Plus haut degré" linenums="1"
+        from math import inf
+
+        def degre_max(G : dict) -> str:
+            res  = None
+            maxi = -inf
+
+            for el in G:
+                if ... > ... :
+                    res  = ...
+                    maxi = ...
+
+            return res
+        ```
+
+??? tip "Indications"
+
+    1. Le degré correspond au nombre de voisins.
+    2. Lorsqu'on trouve un sommet avec un degré plus grand, on le garde en mémoire.
+
+??? bug "Correction"
+
+    1. Le degré correspond à la longueur de la liste associée :
+
+        ``` python title="Plus haut degré" linenums="1"
+        def degre_max(G : dict, s : str) -> int:
+            return len(G[s])
+        ```
+
+    2. On propose le code :
+
+        ``` python title="Plus haut degré" linenums="1"
+        from math import inf
+
+        def degre_max(G : dict) -> str:
+            res  = None
+            maxi = -inf
+
+            for el in G:
+                if degre(G, el) > maxi :
+                    res  = el
+                    maxi = degre(G, el)
+
+            return res
+        ```
