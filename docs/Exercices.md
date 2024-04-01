@@ -159,3 +159,59 @@
 
             return res
         ```
+
+!!! question "Exercice 5"
+
+    Pour un graphe orienté donné $G$, on appelle inverse de $G$, le graphe $\overline{G}$ dont tous les arcs ont été changés de sens.
+
+    Par exemple, l'inverse de :
+
+    <center>
+        <img src="../images/exo51.png" alt="image" width="250" height="auto">
+    </center>
+
+    est le graphe :
+
+    <center>
+        <img src="../images/exo52.png" alt="image" width="250" height="auto">
+    </center>
+
+    1. Donner le dictionnaire python associé au graphe $G$ de l'exemple ci-dessus.
+    2. Donner le dictionnaire python associé au graphe $\overline{G}$ de l'exemple ci-dessus.
+    3. Écrire une fonction `inverser(g : dict) -> dict` qui à un dictionnaire donné renvoie le dictionnaire associé au graphe inversé.
+
+??? tip "Indications"
+
+    1. Facile
+    2. Facile
+    3. L'idée est **d'inverser** le dictionnaire associé à $G$.
+
+??? bug "Correction"
+
+    1. On a :
+
+    ``` python title="Dictionnaire pour G" linenums="1"
+    {'C': ['A', 'D', 'F'], 'D': ['B', 'E', 'G']}
+    ```
+
+    2. On a :
+
+    ``` python title="Dictionnaire pour G" linenums="1"
+    {'A': ['C'], 'B': ['D'], 'D': ['C'], 'E': ['D'], 'F': ['C'], 'G': ['D']}
+    ```
+
+    3. On propose :
+
+    ``` python title="Dictionnaire pour l'inverse de G" linenums="1"
+    def inverser(g : dict) -> dict:
+        res = {}
+        
+        for el in g:
+            for s in g[el]:
+                if not s in res:
+                    res[s] = [el]
+                else:
+                    res[s].append(el)
+            
+        return res
+    ```
