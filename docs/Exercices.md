@@ -66,3 +66,5 @@
         <center>
             <img src="../images/exo2.png" alt="image" width="450" height="auto">
         </center>
+
+## En implantant avec un dictionnaire
