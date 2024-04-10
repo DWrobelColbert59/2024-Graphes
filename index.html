@@ -1,0 +1,915 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="Exercices/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Numérique et sciences informatiques</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-graphes" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="." title="Numérique et sciences informatiques" class="md-header__button md-logo" aria-label="Numérique et sciences informatiques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Numérique et sciences informatiques
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les graphes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  Les graphes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Exercices/" class="md-tabs__link">
+        
+  
+    
+  
+  Exercices
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Travaux%20pratiques/" class="md-tabs__link">
+        
+  
+    
+  
+  Travaux pratiques
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Numérique et sciences informatiques" class="md-nav__button md-logo" aria-label="Numérique et sciences informatiques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Numérique et sciences informatiques
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Généralités
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Généralités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-graphes-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les graphes simples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-graphes-orientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les graphes orientés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-graphes-ponderes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les graphes pondérés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implantation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implantation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implantation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liste-dadjacence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste d'adjacence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrice-dadjacence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrice d'adjacence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parcours-de-graphe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parcours de graphe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parcours de graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parcours-en-profondeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parcours en profondeur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcours-en-largeur-dabord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parcours en largeur d'abord
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Travaux%20pratiques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Travaux pratiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="les-graphes">Les graphes</h1>
+<h2 id="generalites">Généralités</h2>
+<p>De manière générale, un graphe permet de représenter les connexions d’un ensemble en exprimant les relations
+entre ses éléments : réseau de communication, réseau routier, circuit électronique, ... , mais aussi relations
+sociales ou interactions entre espèces animales.</p>
+<div class="admonition note">
+<p class="admonition-title">Les ponts de Königsberg</p>
+<p>Le problème des sept ponts de Königsberg cherche à déterminer s'il existe un chemin permettant de revenir à son point de départ en empruntant une seule fois chaque pont de la ville. Leonhard Euler démontre en 1735 qu'un tel chemin n'existe pas.</p>
+<p><center>
+    <img src="./images/ponts.png" alt="image" width="200" height="auto">
+</center></p>
+</div>
+<p>La théorie des graphes est avant tout une branche à part entière et déjà ancienne des mathématiques. 
+Néanmoins, l’importance accrue que revêt l’aspect algorithmique dans ses applications pratiques en fait aussi un domaine incontournable de l’informatique. 
+Pour schématiser, les mathématiciens s’intéressent avant tout aux propriétés globales des graphes là où les
+informaticiens vont plutôt chercher à concevoir des algorithmes efficaces pour résoudre un problème faisant intervenir un graphe.</p>
+<h3 id="les-graphes-simples">Les graphes simples</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Définition</p>
+<p>En mathématiques, un graphe est un couple <span class="arithmatex">\(G = (V, E)\)</span> avec :</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(V\)</span> l'ensemble des sommets du graphe ;</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E\)</span> l'ensemble des arêtes, chacune étant associée à un couple <span class="arithmatex">\(\lbrace u, v \rbrace\)</span> avec <span class="arithmatex">\(u, v \in E\)</span>.</p>
+</li>
+</ul>
+<p>Le nombre de sommets dans un graphe correspond à son <strong>ordre</strong>.</p>
+<details class="question">
+<summary>Pourquoi des accolades pour une arête ?</summary>
+<p>Pour décrire l'arête entre les sommets <span class="arithmatex">\(u\)</span> et <span class="arithmatex">\(v\)</span>, on utilise la notation <span class="arithmatex">\(\lbrace u, v\rbrace\)</span> pour
+mettre en avant le fait que l'arête ne soit pas orientée.</p>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Vocabulaire</p>
+<p>S'il existe une arête entre deux sommets <span class="arithmatex">\(u\)</span> et <span class="arithmatex">\(v\)</span>, on dit que ces sommets sont <strong>adjacents</strong>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple de graphe</p>
+<p>Mathématiquement, le graphe suivant :</p>
+<p><center>
+    <img src="./images/ex1.png" alt="image" width="250" height="auto">
+</center></p>
+<p>s'écrit <span class="arithmatex">\(G = (V, E)\)</span> avec :</p>
+<div class="arithmatex">\[
+    V = \lbrace A, B, C, D, E, F, G\rbrace \quad \textrm{et} \quad E = \left\lbrace \rule[0.5cm]{0cm}{0pt} \lbrace A, B \rbrace, \lbrace A, C\rbrace, \lbrace A, D\rbrace, \lbrace B, D \rbrace, \lbrace B, E\rbrace, \lbrace B, G\rbrace, \lbrace C, E\rbrace, \lbrace C,F \rbrace \right\rbrace
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Chaîne</p>
+<p>Dans un graphe <span class="arithmatex">\(G = (V, E)\)</span>, une <strong>chaîne</strong> reliant <span class="arithmatex">\(u \in V\)</span> à <span class="arithmatex">\(v \in V\)</span> est définie par une suite finie d'arêtes consécutives reliant <span class="arithmatex">\(u\)</span> à <span class="arithmatex">\(v\)</span>.<br />
+S'il existe un chemin allant de <span class="arithmatex">\(u \in V\)</span> à <span class="arithmatex">\(u\)</span> on dit que c'est un <strong>cycle</strong>.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Degré d'un sommet</p>
+<p>Soit <span class="arithmatex">\(G = (V, E)\)</span> un graphe et <span class="arithmatex">\(v \in V\)</span> un sommet.<br />
+On note <span class="arithmatex">\(\delta(v)\)</span> le nombre de voisins de <span class="arithmatex">\(v\)</span>. Ce nombre est aussi appelé le <strong>degré</strong> de <span class="arithmatex">\(v\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Dans le graphe précédent, on a <span class="arithmatex">\(\delta(B) = 4\)</span>.</p>
+</div>
+<h3 id="les-graphes-orientes">Les graphes orientés</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Définition</p>
+<p>On dit qu'un graphe est <strong>orienté</strong> lorsque les arêtes possèdent un sens.<br />
+L'arête <span class="arithmatex">\(\lbrace u, v \rbrace\)</span> est alors notée <span class="arithmatex">\((u, v)\)</span> et est appelée <strong>un arc</strong>.</p>
+<p>Pour un arc <span class="arithmatex">\((u, v)\)</span> donné :</p>
+<ul>
+<li>le sommet <span class="arithmatex">\(u\)</span> est appelé <strong>l'origine</strong> ;</li>
+<li>le sommet <span class="arithmatex">\(v\)</span> est appelé <strong>la cible</strong>.</li>
+</ul>
+<details class="warning">
+<summary>Attention !</summary>
+<p>Attention au changement de notation et de noms ! </p>
+<p>L'arête <span class="arithmatex">\(\lbrace u, v\rbrace\)</span> laisse place à l'arc <span class="arithmatex">\((u, v)\)</span>.<br />
+De la même façon, on ne parle plus de <strong>chaînes</strong> mais de <strong>chemins</strong>.</p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple de graphe orienté</p>
+<p>Mathématiquement, le graphe orienté suivant :</p>
+<p><center>
+    <img src="./images/ex2.png" alt="image" width="175" height="auto">
+</center></p>
+<p>s'écrit <span class="arithmatex">\(G = (V, E)\)</span> avec :</p>
+<div class="arithmatex">\[
+    V = \lbrace A, B, C, D, E, F, G\rbrace \quad \textrm{et} \quad E = \left\lbrace \rule[0.5cm]{0cm}{0pt} (A, C), (A, F), (B, A), (B, G), (C, D), (D, B), (D, E)\right\rbrace
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Degré entrant et sortant</p>
+<p>Dans un graphe orienté, on distingue la notion de degré entrant noté <span class="arithmatex">\(\delta^-\)</span> de celle de degré sortant noté <span class="arithmatex">\(\delta^+\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Dans le graphe précédent, on a <span class="arithmatex">\(\delta^-(D) = 1\)</span> et <span class="arithmatex">\(\delta^+(D) = 3\)</span>.</p>
+</div>
+<h3 id="les-graphes-ponderes">Les graphes pondérés</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Définition</p>
+<p>On dit qu'un graphe <span class="arithmatex">\(G = (V, E)\)</span> est <strong>pondéré</strong> si chaque arête (ou chaque arc) est associé à un nombre.<br />
+Ce nombre est alors appelé <strong>le poids</strong>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple de graphe pondéré</p>
+<p>Par exemple, le graphe suivant est pondéré.</p>
+<p><center>
+    <img src="./images/ex3.png" alt="image" width="350" height="auto">
+</center></p>
+<details class="warning">
+<summary>Attention</summary>
+<p>On peut pondérer un graphe simple mais aussi un graphe orienté.</p>
+</details>
+</div>
+<h2 id="implantation">Implantation</h2>
+<p>On s'intéresse ici à la façon dont on implante un graphe en Python.</p>
+<h3 id="liste-dadjacence">Liste d'adjacence</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Définition</p>
+<p>On considère un graphe <span class="arithmatex">\(G = (V, E)\)</span> à <span class="arithmatex">\(n\)</span> sommets.  </p>
+<p>On appelle <strong>liste d'adjacence</strong> de <span class="arithmatex">\(G\)</span>, un tableau de taille <span class="arithmatex">\(n\)</span> où le <span class="arithmatex">\(i\)</span>-ième élément correspond à la liste des voisins du sommet numéro <span class="arithmatex">\(i\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Dans le graphe </p>
+<p><center>
+    <img src="./images/ex4.png" alt="image" width="350" height="auto">
+</center></p>
+<p>la liste d'adjacence se représente par :</p>
+<div class="arithmatex">\[
+    \begin{array}{ccl}
+        \begin{array}{|c|}\hline A\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|}\hline C &amp; E \\\hline\end{array}\\
+        \begin{array}{|c|}\hline B\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|}\hline G \\\hline\end{array}\\
+        \begin{array}{|c|}\hline C\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|c|}\hline A &amp; D &amp; F &amp; G \\\hline\end{array}\\
+        \begin{array}{|c|}\hline D\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|}\hline C &amp; E &amp; F\\\hline\end{array}\\
+        \begin{array}{|c|}\hline E\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|}\hline A &amp; D \\\hline\end{array}\\
+        \begin{array}{|c|}\hline F\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|}\hline C &amp; D &amp; G\\\hline\end{array}\\
+        \begin{array}{|c|}\hline G\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|}\hline B &amp; C &amp; F\\\hline\end{array}\\
+    \end{array}
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Avantages</p>
+<p>Si le graphe possède peu d'arêtes, cette représentation occupe peu de place en mémoire.</p>
+</div>
+<p>En python, on préconise l'utilisation de dictionnaire pour modéliser un graphe par sa liste d'adjacence.<br />
+On fait évoluer la structure de données suivant que le graphe est pondéré ou non.</p>
+<div class="admonition example">
+<p class="admonition-title">Utilisation d'un dictionnaire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Graphe simple</label><label for="__tabbed_1_2">Graphe orienté</label><label for="__tabbed_1_3">Graphe pondéré</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><center>
+    <img src="./images/ex51.png" alt="image" width="400" height="auto">
+</center></p>
+<p>En python, la liste d'adjacence pourrait s'écrire </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Liste d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">G</span> <span class="o">=</span> <span class="p">{</span>   <span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>        <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="s1">&#39;D&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="s1">&#39;E&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="s1">&#39;F&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="s1">&#39;G&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><center>
+    <img src="./images/ex52.png" alt="image" width="400" height="auto">
+</center></p>
+<p>En python, la liste d'adjacence pourrait s'écrire </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Liste d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">G</span> <span class="o">=</span> <span class="p">{</span>   <span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>        <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="p">[],</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="s1">&#39;D&#39;</span> <span class="p">:</span> <span class="p">[],</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="s1">&#39;E&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="s1">&#39;F&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="s1">&#39;G&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><center>
+    <img src="./images/ex53.png" alt="image" width="400" height="auto">
+</center></p>
+<p>En python, la liste d'adjacence pourrait s'écrire </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Liste d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">G</span> <span class="o">=</span> <span class="p">{</span>   <span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)],</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>        <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)],</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)],</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="s1">&#39;D&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)],</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="s1">&#39;E&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)],</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="s1">&#39;F&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)],</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="s1">&#39;G&#39;</span> <span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="matrice-dadjacence">Matrice d'adjacence</h3>
+<p>Il existe différentes matrices que l'on peut associer à un graphe <span class="arithmatex">\(G\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="arithmatex">\(G = (V, E)\)</span> un graphe où l'on note <span class="arithmatex">\(S_1, S_2, \cdots, S_n\)</span> les différents sommets.<br />
+On appelle <strong>matrice d'adjacence</strong> de <span class="arithmatex">\(G\)</span> le tableau de taille <span class="arithmatex">\(n\times n\)</span> où le coefficient 
+de la ligne <span class="arithmatex">\(i\)</span> et de la colonne <span class="arithmatex">\(j\)</span> est donné par :</p>
+<div class="arithmatex">\[
+    a_{i, j} = \left\lbrace \begin{array}{ll}1 &amp; \textrm{si }S_i \textrm{ et } S_j \textrm{ sont adjacents}\\ 0 &amp; \textrm{sinon}\end{array}\right.
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Dans le cas d'un graphe orienté, le coefficient <span class="arithmatex">\(a_{i, j}\)</span> vaut <span class="arithmatex">\(1\)</span> seulement s'il existe un arc entre le sommet <span class="arithmatex">\(S_i\)</span> et le sommet <span class="arithmatex">\(S_j\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Graphe simple</label><label for="__tabbed_2_2">Graphe orienté</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><center>
+    <img src="./images/ex51.png" alt="image" width="400" height="auto">
+</center></p>
+<p>La matrice d'adjacence associé à ce graphe est :</p>
+<div class="arithmatex">\[
+    \left(\begin{matrix}
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+        1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+        1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0
+    \end{matrix}\right)    
+\]</div>
+</div>
+<div class="tabbed-block">
+<p><center>
+    <img src="./images/ex52.png" alt="image" width="400" height="auto">
+</center></p>
+<p>La matrice d'adjacence associé à ce graphe est :</p>
+<div class="arithmatex">\[
+    \left(\begin{matrix}
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+        1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+        0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
+        0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0
+    \end{matrix}\right)    
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<p>En python, on peut implanter une matrice d'adjacence avec une liste de liste.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>La matrice <span class="arithmatex">\(\left(\begin{matrix}0 &amp; 1 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 1 &amp; 1\\0 &amp; 1 &amp; 0 &amp; 0\\1 &amp; 1 &amp; 0 &amp; 0\end{matrix}\right)\)</span> peut s'implanter en python par le code :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matrice d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition question">
+<p class="admonition-title">Aide mémoire</p>
+<p>On recopie la matrice ligne par ligne.</p>
+</div>
+</div>
+<p>On peut également utiliser le module <strong>numpy</strong> qui intègre un type <strong>array</strong> qui facilite certains calculs.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>La matrice <span class="arithmatex">\(\left(\begin{matrix}0 &amp; 1 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 1 &amp; 1\\0 &amp; 1 &amp; 0 &amp; 0\\1 &amp; 1 &amp; 0 &amp; 0\end{matrix}\right)\)</span> peut s'implanter en python par le code :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matrice d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Propriété</p>
+<p>On note <span class="arithmatex">\(A\)</span> la matrice d'adjacence d'un graphe <span class="arithmatex">\(G = (V, E)\)</span> donné avec <span class="arithmatex">\(S_1, S_2, \cdots, S_n\)</span> les sommets de <span class="arithmatex">\(G\)</span>.  </p>
+<p>Pour <span class="arithmatex">\(k\in\mathbb{N}\)</span>, le coefficient de la ligne <span class="arithmatex">\(i\)</span> et de la colonne <span class="arithmatex">\(j\)</span> de la matrice <span class="arithmatex">\(A^k\)</span> correspond au nombre
+de chemins de longueur <span class="arithmatex">\(k\)</span> reliant les sommets <span class="arithmatex">\(S_i\)</span> et <span class="arithmatex">\(S_j\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Reprenons le graphe associé à la matrice <span class="arithmatex">\(\left(\begin{matrix}0 &amp; 1 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 1 &amp; 1\\0 &amp; 1 &amp; 0 &amp; 0\\1 &amp; 1 &amp; 0 &amp; 0\end{matrix}\right)\)</span> dont
+une représentation est donnée par :</p>
+<p><center>
+    <img src="./images/ex5.png" alt="image" width="300" height="auto">
+</center></p>
+<p>On calcule <span class="arithmatex">\(A^3\)</span> à l'aide de python :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matrice d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">G</span><span class="p">))</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>       <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>       <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>       <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</code></pre></div></td></tr></table></div>
+<p>Le coefficient de la ligne <span class="arithmatex">\(1\)</span> colonne <span class="arithmatex">\(1\)</span> vaut <span class="arithmatex">\(2\)</span> et correspond au nombre de chemins de longueur <span class="arithmatex">\(3\)</span> reliant <span class="arithmatex">\(A\)</span> à <span class="arithmatex">\(A\)</span>. Ces chemins sont :</p>
+<div class="arithmatex">\[
+    A - B - D - A \qquad \textrm{et} \qquad A - D - B - A
+\]</div>
+<div class="admonition question">
+<p class="admonition-title">Calcul de la puissance d'une matrice</p>
+<p>La méthode <code>dot</code> du module <code>numpy</code> prend deux matrices en argument et réalise le produit de ces matrices.<br />
+Ainsi pour une matrice <span class="arithmatex">\(A\)</span> donnée, on écrit <code>np.dot(A, A)</code> pour calculer la matrice <span class="arithmatex">\(A^2\)</span>.</p>
+</div>
+</div>
+<h2 id="parcours-de-graphe">Parcours de graphe</h2>
+<h3 id="parcours-en-profondeur">Parcours en profondeur</h3>
+<h3 id="parcours-en-largeur-dabord">Parcours en largeur d'abord</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 David Wrobel
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

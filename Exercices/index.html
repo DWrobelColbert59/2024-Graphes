@@ -1,0 +1,875 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Travaux%20pratiques/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Exercices - Numérique et sciences informatiques</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercices" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Numérique et sciences informatiques" class="md-header__button md-logo" aria-label="Numérique et sciences informatiques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Numérique et sciences informatiques
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Les graphes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Exercices
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Travaux%20pratiques/" class="md-tabs__link">
+        
+  
+    
+  
+  Travaux pratiques
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Numérique et sciences informatiques" class="md-nav__button md-logo" aria-label="Numérique et sciences informatiques" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Numérique et sciences informatiques
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Exercices
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-exercices-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les exercices de base
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avec-une-liste-dadjacence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avec une liste d'adjacence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avec-une-matrice-dadjacence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avec une matrice d'adjacence
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Travaux%20pratiques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Travaux pratiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exercices">Exercices</h1>
+<h2 id="les-exercices-de-base">Les exercices de base</h2>
+<div class="admonition question">
+<p class="admonition-title">Exercice 1</p>
+<p>On considère le graphe <span class="arithmatex">\(G = (V, E)\)</span> avec :</p>
+<div class="arithmatex">\[
+    V = \lbrace A, B, C, D, E\rbrace \quad \textrm{et} \quad E = \left\lbrace \rule[0.5cm]{0cm}{0pt} \lbrace A, B \rbrace, \lbrace A, C\rbrace, \lbrace A, E\rbrace, \lbrace B, D \rbrace, \lbrace C, D \rbrace\right\rbrace
+\]</div>
+<ol>
+<li>Quel est le degré du sommet <span class="arithmatex">\(A\)</span> ?</li>
+<li>Existe-il une chaîne entre <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(D\)</span> ?</li>
+<li>Représenter ce graphe.</li>
+</ol>
+</div>
+<details class="tip">
+<summary>Indications</summary>
+<ol>
+<li>Il suffit de compter les arêtes contenant <span class="arithmatex">\(A\)</span>.</li>
+<li>Il suffit de suivre les arêtes en partant de <span class="arithmatex">\(A\)</span> et voir si l'on arrive sur <span class="arithmatex">\(D\)</span>.</li>
+</ol>
+</details>
+<details class="bug">
+<summary>Correction</summary>
+<ol>
+<li>
+<p>On compte exactement trois arêtes contenant <span class="arithmatex">\(A\)</span>. D'où <span class="arithmatex">\(\delta(A) = 3\)</span>.</p>
+</li>
+<li>
+<p>Il existe plusieurs chaînes possibles :</p>
+<div class="arithmatex">\[
+    \lbrace A, B \rbrace - \lbrace B, D \rbrace \quad \textrm{ou} \quad \lbrace A, C \rbrace - \lbrace C, D \rbrace  
+\]</div>
+</li>
+<li>
+<p>Une possibilité est : </p>
+<p><center>
+    <img src="../images/exo1.png" alt="image" width="200" height="auto">
+</center></p>
+</li>
+</ol>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Exercice 2</p>
+<p>On considère le graphe orienté <span class="arithmatex">\(G = (V, E)\)</span> avec :</p>
+<div class="arithmatex">\[
+    V = \lbrace A, B, C, D, E, F\rbrace \quad \textrm{et} \quad E = \left\lbrace \rule[0.5cm]{0cm}{0pt} (A, D), (A, E), (B, A), (B, C), (C, F), (D, C), (F, B)\right\rbrace
+\]</div>
+<ol>
+<li>Déterminer les valeurs de <span class="arithmatex">\(\delta^-(C)\)</span> et <span class="arithmatex">\(\delta^+(C)\)</span>.</li>
+<li>Combien y-a-t il de cycles partant du sommet <span class="arithmatex">\(C\)</span> ?</li>
+<li>Donner une représentation de ce graphe.</li>
+</ol>
+</div>
+<details class="tip">
+<summary>Indications</summary>
+<ol>
+<li><span class="arithmatex">\(\delta^-(C)\)</span> correspond au nombre d'arcs entrants du sommet <span class="arithmatex">\(C\)</span>. On compte alors les arcs ayant <span class="arithmatex">\(C\)</span> pour cible.</li>
+<li>Il suffit de suivre les chemins possibles avec les arcs proposés.</li>
+</ol>
+</details>
+<details class="bug">
+<summary>Correction</summary>
+<ol>
+<li>On a <span class="arithmatex">\(\delta^-(C) = 2\)</span> car il y a deux arcs avec <span class="arithmatex">\(C\)</span> comme cible et <span class="arithmatex">\(\delta^+(C) = 1\)</span> car un seul arc possède <span class="arithmatex">\(C\)</span> comme origine.</li>
+<li>
+<p>Il y a deux cycles depuis le sommet <span class="arithmatex">\(C\)</span> donnés par les chemins :</p>
+<div class="arithmatex">\[
+    (C, F) - (F, B) - (B, C) \quad \textrm{et} \quad (C, F) - (F, B) - (B, A) - (A, D) - (D, C)
+\]</div>
+</li>
+<li>
+<p>Une possibilité est : </p>
+<p><center>
+    <img src="../images/exo2.png" alt="image" width="450" height="auto">
+</center></p>
+</li>
+</ol>
+</details>
+<h2 id="avec-une-liste-dadjacence">Avec une liste d'adjacence</h2>
+<div class="admonition question">
+<p class="admonition-title">Exercice 3</p>
+<p>On considère le graphe dont la liste d'adjacence est donnée par :</p>
+<div class="arithmatex">\[
+    \begin{array}{ccl}
+        \begin{array}{|c|}\hline A\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|}\hline B \\\hline\end{array}\\
+        \begin{array}{|c|}\hline B\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|}\hline A &amp; D &amp; G \\\hline\end{array}\\
+        \begin{array}{|c|}\hline C\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|}\hline D &amp; E \\\hline\end{array}\\
+        \begin{array}{|c|}\hline D\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|c|}\hline B &amp; C &amp; E &amp; G\\\hline\end{array}\\
+        \begin{array}{|c|}\hline E\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|}\hline C &amp; D \\\hline\end{array}\\
+        \begin{array}{|c|}\hline F\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|}\hline G\\\hline\end{array}\\
+        \begin{array}{|c|}\hline G\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|c|}\hline B &amp; D &amp; F\\\hline\end{array}\\
+    \end{array}
+\]</div>
+<ol>
+<li>Ce graphe est-il orienté ou simple ?</li>
+<li>Donner le degré du sommet <span class="arithmatex">\(D\)</span>.</li>
+<li>Proposer un dictionnaire écrit en python implantant ce graphe.</li>
+</ol>
+</div>
+<details class="tip">
+<summary>Indications</summary>
+<ol>
+<li>Il suffit de vérifier si chaque arête <span class="arithmatex">\((u, v)\)</span> possède son symétrique <span class="arithmatex">\((v, u)\)</span> dans la liste d'adjacence.</li>
+</ol>
+</details>
+<details class="bug">
+<summary>Correction</summary>
+<ol>
+<li>Toutes les arêtes possèdent un symétrique dans la liste donc le graphe est simple.</li>
+<li>Le sommet de <span class="arithmatex">\(D\)</span> est <span class="arithmatex">\(\delta(D) = 4\)</span>.</li>
+<li>
+<p>On propose le dictionnaire :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Proposition de correction</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">G</span> <span class="o">=</span> <span class="p">{</span>   <span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>        <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="s1">&#39;D&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="s1">&#39;E&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="s1">&#39;F&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="s1">&#39;G&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Exercice 4</p>
+<ol>
+<li>Écrire une fonction <code>degre(G : dict, s : str) -&gt; int</code> qui renvoie le degré d'un sommet <span class="arithmatex">\(s\)</span>.</li>
+<li>
+<p>Compléter la fonction <code>degre_max(G : dict) -&gt; str</code> qui renvoie le sommet de plus grand degré dans un graphe <span class="arithmatex">\(G\)</span> :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Plus haut degré</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">def</span> <span class="nf">degre_max</span><span class="p">(</span><span class="n">G</span> <span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">res</span>  <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">maxi</span> <span class="o">=</span> <span class="o">-</span><span class="n">inf</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">G</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span> <span class="p">:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>            <span class="n">res</span>  <span class="o">=</span> <span class="o">...</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>            <span class="n">maxi</span> <span class="o">=</span> <span class="o">...</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+</div>
+<details class="tip">
+<summary>Indications</summary>
+<ol>
+<li>Le degré correspond au nombre de voisins.</li>
+<li>Lorsqu'on trouve un sommet avec un degré plus grand, on le garde en mémoire.</li>
+</ol>
+</details>
+<details class="bug">
+<summary>Correction</summary>
+<ol>
+<li>
+<p>Le degré correspond à la longueur de la liste associée :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Plus haut degré</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">degre_max</span><span class="p">(</span><span class="n">G</span> <span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>On propose le code :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Plus haut degré</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">def</span> <span class="nf">degre_max</span><span class="p">(</span><span class="n">G</span> <span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">res</span>  <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">maxi</span> <span class="o">=</span> <span class="o">-</span><span class="n">inf</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">G</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>        <span class="k">if</span> <span class="n">degre</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">maxi</span> <span class="p">:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>            <span class="n">res</span>  <span class="o">=</span> <span class="n">el</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>            <span class="n">maxi</span> <span class="o">=</span> <span class="n">degre</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Exercice 5</p>
+<p>Pour un graphe orienté donné <span class="arithmatex">\(G\)</span>, on appelle inverse de <span class="arithmatex">\(G\)</span>, le graphe <span class="arithmatex">\(\overline{G}\)</span> dont tous les arcs ont été changés de sens.</p>
+<p>Par exemple, l'inverse de :</p>
+<p><center>
+    <img src="../images/exo51.png" alt="image" width="250" height="auto">
+</center></p>
+<p>est le graphe :</p>
+<p><center>
+    <img src="../images/exo52.png" alt="image" width="250" height="auto">
+</center></p>
+<ol>
+<li>Donner le dictionnaire python associé au graphe <span class="arithmatex">\(G\)</span> de l'exemple ci-dessus.</li>
+<li>Donner le dictionnaire python associé au graphe <span class="arithmatex">\(\overline{G}\)</span> de l'exemple ci-dessus.</li>
+<li>Écrire une fonction <code>inverser(g : dict) -&gt; dict</code> qui à un dictionnaire donné renvoie le dictionnaire associé au graphe inversé.</li>
+</ol>
+</div>
+<details class="tip">
+<summary>Indications</summary>
+<ol>
+<li>Facile</li>
+<li>Facile</li>
+<li>L'idée est <strong>d'inverser</strong> le dictionnaire associé à <span class="arithmatex">\(G\)</span>.</li>
+</ol>
+</details>
+<details class="bug">
+<summary>Correction</summary>
+<ol>
+<li>On a :</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Dictionnaire pour G</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span><span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>On a :</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Dictionnaire pour G</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">],</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>On propose :</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Dictionnaire pour l'inverse de G</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">inverser</span><span class="p">(</span><span class="n">g</span> <span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">g</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">el</span><span class="p">]:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">res</span><span class="p">:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>                <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">el</span><span class="p">]</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>                <span class="n">res</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="avec-une-matrice-dadjacence">Avec une matrice d'adjacence</h2>
+<div class="admonition question">
+<p class="admonition-title">Exercice 6</p>
+<p>On considère le graphe <span class="arithmatex">\(G = (V, E)\)</span> dont une représentation est donnée par</p>
+<p><center>
+    <img src="../images/exo61.png" alt="image" width="350" height="auto">
+</center></p>
+<ol>
+<li>Écrire la matrice d'adjacence associée à ce graphe.</li>
+<li>Proposer une instruction python permettant d'implanter cette matrice d'adjacence.</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 7</p>
+<p>On considère le graphe <span class="arithmatex">\(G = (V, E)\)</span> dont la liste d'adjacence est donnée par :</p>
+<div class="arithmatex">\[
+    \begin{array}{ccl}
+        \begin{array}{|c|}\hline A\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|}\hline D \\\hline\end{array}\\
+        \begin{array}{|c|}\hline B\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|}\hline D &amp; F \\\hline\end{array}\\
+        \begin{array}{|c|}\hline C\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|c|}\hline E &amp; F \\\hline\end{array}\\
+        \begin{array}{|c|}\hline D\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|}\hline C\\\hline\end{array}\\
+        \begin{array}{|c|}\hline E\\\hline\end{array} &amp; \longrightarrow &amp; \begin{array}{|c|}\hline D \\\hline\end{array}
+    \end{array}
+\]</div>
+<ol>
+<li>Écrire la matrice d'adjacence de ce graphe.</li>
+<li>Proposer une représentation de <span class="arithmatex">\(G\)</span>.</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 8</p>
+<p>On s'intéresse dans cet exercice au passage d'une matrice d'adjacence à une liste d'adjacence.  </p>
+<p>On considère le graphe orienté <span class="arithmatex">\(G = (V, E)\)</span> dont la matrice d'adjacence est donnée par la liste python :</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matrice d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</code></pre></div></td></tr></table></div>
+1. En supposant que les sommets sont nommés <span class="arithmatex">\(A, B, C, D\)</span> et <span class="arithmatex">\(E\)</span>, donner la liste d'adjacence de ce graphe.<br />
+2. Proposer une fonction python <code>matrix_to_list(g : list) -&gt; dict</code> qui renvoie la liste d'adjacence d'un graphe passé en paramètre via sa matrice d'adjacence.  </p>
+<p>Par exemple, l'instruction <code>matrix_to_list(g)</code> renverrait :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 9</p>
+<p>On considère un graphe <span class="arithmatex">\(G = (V, E)\)</span> dont la matrice d'adjacence est donnée par la liste python :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matrice d'adjacence</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Compléter le tableau suivant :</p>
+<div class="arithmatex">\[
+    \begin{array}{|l|c|c|c|c|c|c|}
+        \hline
+        \textrm{Sommet} &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F\\
+        \hline
+        \textrm{Degré entrant } \delta^- &amp; &amp; &amp; &amp; &amp; &amp; \\
+        \hline
+        \textrm{Degré sortant } \delta^+ &amp; &amp; &amp; &amp; &amp; &amp; \\
+        \hline
+    \end{array}    
+\]</div>
+</li>
+<li>
+<p>Écrire une fonction python <code>degres(g : list) -&gt; dict</code> qui renvoie le degré entrant et sortant de tous les sommets du graphe.<br />
+Par exemple pour le graphe </p>
+<p><center>
+    <img src="../images/exo71.png" alt="image" width="350" height="auto">
+</center></p>
+<p>on aurait </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">degres</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;in&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}}</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercice 10</p>
+<p>On considère le graphe <span class="arithmatex">\(G = (V, E)\)</span> dont une représentation est :</p>
+<p><center>
+    <img src="../images/exo101.png" alt="image" width="550" height="auto">
+</center></p>
+<ol>
+<li>Écrire l'instruction permettant d'implanter ce graphe à l'aide d'une structure <code>array</code> du module <code>numpy</code> et de l'associer à la variable <code>g</code>.</li>
+<li>Écrire une fonction <code>power(t:array, n:int) -&gt; array</code> qui calcule la puissance <span class="arithmatex">\(n\)</span>-ième de la matrice <code>t</code> passée en paramètre.</li>
+<li>L'instruction <code>power(g, 4)</code> a renvoyé :
+    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Puissance quatrième</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>        <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>        <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">],</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>        <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>        <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">20</span><span class="p">]])</span>
+</code></pre></div></td></tr></table></div>
+    Donner les chemins de longueur 4 reliant <span class="arithmatex">\(C\)</span> à <span class="arithmatex">\(F\)</span>.</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 David Wrobel
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
