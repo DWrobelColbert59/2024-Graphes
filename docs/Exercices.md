@@ -49,7 +49,7 @@
 
 ??? tip "Indications"
 
-    1. $\delta^-(C)$ correspond au nombre d'arcs sortants du sommet $C$. On compte alors les arcs ayant $C$ pour cible.
+    1. $\delta^-(C)$ correspond au nombre d'arcs entrants du sommet $C$. On compte alors les arcs ayant $C$ pour cible.
     2. Il suffit de suivre les chemins possibles avec les arcs proposés.
 
 ??? bug "Correction"
@@ -215,3 +215,109 @@
             
         return res
     ```
+
+## Avec une matrice d'adjacence
+
+!!! question "Exercice 6"
+
+    On considère le graphe $G = (V, E)$ dont une représentation est donnée par
+
+    <center>
+        <img src="../images/exo61.png" alt="image" width="350" height="auto">
+    </center>
+
+    1. Écrire la matrice d'adjacence associée à ce graphe.
+    2. Proposer une instruction python permettant d'implanter cette matrice d'adjacence.
+
+!!! question "Exercice 7"
+
+    On considère le graphe $G = (V, E)$ dont la liste d'adjacence est donnée par :
+
+    \[
+        \begin{array}{ccl}
+            \begin{array}{|c|}\hline A\\\hline\end{array} & \longrightarrow & \begin{array}{|c|}\hline D \\\hline\end{array}\\
+            \begin{array}{|c|}\hline B\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|}\hline D & F \\\hline\end{array}\\
+            \begin{array}{|c|}\hline C\\\hline\end{array} & \longrightarrow & \begin{array}{|c|c|}\hline E & F \\\hline\end{array}\\
+            \begin{array}{|c|}\hline D\\\hline\end{array} & \longrightarrow & \begin{array}{|c|}\hline C\\\hline\end{array}\\
+            \begin{array}{|c|}\hline E\\\hline\end{array} & \longrightarrow & \begin{array}{|c|}\hline D \\\hline\end{array}
+        \end{array}
+    \]
+
+    1. Écrire la matrice d'adjacence de ce graphe.
+    2. Proposer une représentation de $G$.
+
+!!! question "Exercice 8"
+
+    On s'intéresse dans cet exercice au passage d'une matrice d'adjacence à une liste d'adjacence.  
+
+    On considère le graphe orienté $G = (V, E)$ dont la matrice d'adjacence est donnée par la liste python :
+
+    ``` python title="Matrice d'adjacence" linenums="1"
+    g = [[0, 1, 0, 1, 1], [0, 0, 0, 1, 0], [0, 0, 1, 1, 0], [0, 0, 0, 1, 1], [0, 1, 1, 0, 0]]
+    ``` 
+    1. En supposant que les sommets sont nommés $A, B, C, D$ et $E$, donner la liste d'adjacence de ce graphe.  
+    2. Proposer une fonction python `matrix_to_list(g : list) -> dict` qui renvoie la liste d'adjacence d'un graphe passé en paramètre via sa matrice d'adjacence.  
+
+    Par exemple, l'instruction `matrix_to_list(g)` renverrait :
+
+    ``` python title="Exemple" linenums="1"
+    {'A': ['B', 'D', 'E'], 'B': ['D'], 'C': ['C', 'D'], 'D': ['D', 'E'], 'E': ['B', 'C']}
+    ``` 
+    
+!!! question "Exercice 9"
+
+    On considère un graphe $G = (V, E)$ dont la matrice d'adjacence est donnée par la liste python :
+
+    ``` python title="Matrice d'adjacence" linenums="1"
+    g = [[0, 1, 0, 1, 1, 0], [1, 0, 0, 1, 0, 0], [1, 1, 0, 0, 1, 0], [0, 1, 1, 0, 0, 1], [1, 0, 1, 1, 0, 0], [1, 0, 0, 1, 1, 0]]
+    ```
+
+    1. Compléter le tableau suivant :
+
+        \[
+            \begin{array}{|l|c|c|c|c|c|c|}
+                \hline
+                \textrm{Sommet} & A & B & C & D & E & F\\
+                \hline
+                \textrm{Degré entrant } \delta^- & & & & & & \\
+                \hline
+                \textrm{Degré sortant } \delta^+ & & & & & & \\
+                \hline
+            \end{array}    
+        \]
+
+    2. Écrire une fonction python `degres(g : list) -> dict` qui renvoie le degré entrant et sortant de tous les sommets du graphe.  
+    Par exemple pour le graphe 
+
+        <center>
+            <img src="../images/exo71.png" alt="image" width="350" height="auto">
+        </center>
+
+        on aurait 
+
+        ``` python title="Exemple" linenums="1"
+        >>> degres(g)
+        {'A': {'in': 0, 'out': 1}, 'B': {'in': 0, 'out': 2}, 'C': {'in': 1, 'out': 2}, 'D': {'in': 3, 'out': 1}, 'E': {'in': 1, 'out': 1}, 'F': {'in': 2, 'out': 0}}
+        ```
+
+!!! question "Exercice 10"
+
+    On considère le graphe $G = (V, E)$ dont une représentation est :
+
+    <center>
+        <img src="../images/exo101.png" alt="image" width="550" height="auto">
+    </center>
+
+    1. Écrire l'instruction permettant d'implanter ce graphe à l'aide d'une structure `array` du module `numpy` et de l'associer à la variable `g`.
+    2. Écrire une fonction `power(t:array, n:int) -> array` qui calcule la puissance $n$-ième de la matrice `t` passée en paramètre.
+    3. L'instruction `power(g, 4)` a renvoyé :
+        ``` python title="Puissance quatrième" linenums="1"
+        array([ [31, 22, 13, 26, 21, 13, 21],
+                [22, 31, 13, 26, 21, 13, 21],
+                [13, 13, 11, 17, 11,  6,  7],
+                [26, 26, 17, 34, 18, 17, 18],
+                [21, 21, 11, 18, 20,  7, 15],
+                [13, 13,  6, 17,  7, 11, 11],
+                [21, 21,  7, 18, 15, 11, 20]])
+        ```
+        Donner les chemins de longueur 4 reliant $C$ à $F$.

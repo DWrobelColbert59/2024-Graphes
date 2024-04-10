@@ -228,6 +228,129 @@ On fait évoluer la structure de données suivant que le graphe est pondéré ou
 
 ### Matrice d'adjacence
 
+Il existe différentes matrices que l'on peut associer à un graphe $G$.
+
+!!! abstract "Définition"
+
+    Soit $G = (V, E)$ un graphe où l'on note $S_1, S_2, \cdots, S_n$ les différents sommets.  
+    On appelle **matrice d'adjacence** de $G$ le tableau de taille $n\times n$ où le coefficient 
+    de la ligne $i$ et de la colonne $j$ est donné par :
+
+    \[
+        a_{i, j} = \left\lbrace \begin{array}{ll}1 & \textrm{si }S_i \textrm{ et } S_j \textrm{ sont adjacents}\\ 0 & \textrm{sinon}\end{array}\right.
+    \]
+
+!!! warning "Attention"
+
+    Dans le cas d'un graphe orienté, le coefficient $a_{i, j}$ vaut $1$ seulement s'il existe un arc entre le sommet $S_i$ et le sommet $S_j$.
+
+!!! example "Exemples"
+
+    === "Graphe simple"
+
+        <center>
+            <img src="./images/ex51.png" alt="image" width="400" height="auto">
+        </center>
+
+        La matrice d'adjacence associé à ce graphe est :
+
+        \[
+            \left(\begin{matrix}
+                0 & 0 & 0 & 0 & 1 & 1 & 0\\
+                0 & 0 & 0 & 0 & 1 & 0 & 0\\
+                0 & 0 & 0 & 0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 0 & 0 & 0 & 1\\
+                1 & 1 & 0 & 0 & 0 & 1 & 0\\
+                1 & 0 & 1 & 0 & 1 & 0 & 1\\
+                0 & 0 & 0 & 1 & 0 & 1 & 0
+            \end{matrix}\right)    
+        \]
+
+    === "Graphe orienté"
+
+        <center>
+            <img src="./images/ex52.png" alt="image" width="400" height="auto">
+        </center>
+
+        La matrice d'adjacence associé à ce graphe est :
+
+        \[
+            \left(\begin{matrix}
+                0 & 0 & 0 & 0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 0 & 0 & 0 & 0\\
+                1 & 1 & 0 & 0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0 & 1 & 0 & 1\\
+                0 & 0 & 0 & 1 & 0 & 0 & 0
+            \end{matrix}\right)    
+        \]
+
+En python, on peut implanter une matrice d'adjacence avec une liste de liste.
+
+!!! example "Exemple"
+
+    La matrice $\left(\begin{matrix}0 & 1 & 0 & 1\\1 & 0 & 1 & 1\\0 & 1 & 0 & 0\\1 & 1 & 0 & 0\end{matrix}\right)$ peut s'implanter en python par le code :
+
+    ``` python title="Matrice d'adjacence" linenums="1"
+    [[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 0], [1, 1, 0, 0]]
+    ```
+
+    !!! question "Aide mémoire"
+
+        On recopie la matrice ligne par ligne.
+
+On peut également utiliser le module **numpy** qui intègre un type **array** qui facilite certains calculs.
+
+!!! example "Exemple"
+
+    La matrice $\left(\begin{matrix}0 & 1 & 0 & 1\\1 & 0 & 1 & 1\\0 & 1 & 0 & 0\\1 & 1 & 0 & 0\end{matrix}\right)$ peut s'implanter en python par le code :
+
+    ``` python title="Matrice d'adjacence" linenums="1"
+    import numpy as np
+    G = np.array([[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 0], [1, 1, 0, 0]])
+    ```
+
+!!! abstract "Propriété"
+
+    On note $A$ la matrice d'adjacence d'un graphe $G = (V, E)$ donné avec $S_1, S_2, \cdots, S_n$ les sommets de $G$.  
+
+    Pour $k\in\mathbb{N}$, le coefficient de la ligne $i$ et de la colonne $j$ de la matrice $A^k$ correspond au nombre
+    de chemins de longueur $k$ reliant les sommets $S_i$ et $S_j$.
+
+!!! example "Exemple"
+
+    Reprenons le graphe associé à la matrice $\left(\begin{matrix}0 & 1 & 0 & 1\\1 & 0 & 1 & 1\\0 & 1 & 0 & 0\\1 & 1 & 0 & 0\end{matrix}\right)$ dont
+    une représentation est donnée par :
+
+    <center>
+        <img src="./images/ex5.png" alt="image" width="300" height="auto">
+    </center>
+
+    On calcule $A^3$ à l'aide de python :
+
+    ``` python title="Matrice d'adjacence" linenums="1"
+    >>> import numpy as np
+    >>> G = np.array([[0, 1, 0, 1], [1, 0, 1, 1], [0, 1, 0, 0], [1, 1, 0, 0]])
+    >>> np.dot(G, np.dot(G, G))
+    array([[2, 4, 1, 3],
+           [4, 2, 3, 4],
+           [1, 3, 0, 1],
+           [3, 4, 1, 2]])
+    ```
+
+    Le coefficient de la ligne $1$ colonne $1$ vaut $2$ et correspond au nombre de chemins de longueur $3$ reliant $A$ à $A$. Ces chemins sont :
+    
+    \[
+        A - B - D - A \qquad \textrm{et} \qquad A - D - B - A
+    \]
+
+    !!! question "Calcul de la puissance d'une matrice"
+
+        La méthode `dot` du module `numpy` prend deux matrices en argument et réalise le produit de ces matrices.  
+        Ainsi pour une matrice $A$ donnée, on écrit `np.dot(A, A)` pour calculer la matrice $A^2$.
+
+
 ## Parcours de graphe
 
 ### Parcours en profondeur
